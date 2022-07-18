@@ -18,7 +18,7 @@ nav {
     }
     
     #burger-menu-icon {
-        font-size: 2rem;
+        font-size: 3rem;
         color: var(--color-white);
         cursor: pointer;
     }
@@ -28,6 +28,10 @@ nav {
         font-family: u.$fontActor;
         color: var(--color-white);
         cursor: pointer;
+    }
+
+    .site-name {
+        font-size: 3rem;
     }
     
     .nav-text {
