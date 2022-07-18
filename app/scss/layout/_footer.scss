@@ -1,0 +1,150 @@
+@use '../globals' as g;
+@use '../utils' as u;
+
+footer {
+    margin: 0;
+    background-color: var(--white-seconds);
+
+    .footer-links {
+        margin: 0;
+        padding: 1.5rem 1rem 1rem 1rem;
+    }
+    
+    .footer-links {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    
+    .footer-link-element,
+    .phone-number {
+        list-style: none;
+    }
+    
+    .footer-link-element,
+    .footer-link {
+        color: var(--darker-grey);
+        font-family: u.$fontAcme;
+    }
+    
+    .phone-number {
+        font-family: u.$fontAcnolica;
+    }
+    
+    .footer-link:hover {
+        color: var(--dark-green);
+    }
+
+    .locations-and-info {
+        display: flex;
+        gap: 1.3rem;
+        flex-direction: column;
+    }
+
+    .info-box {
+        padding: 1.3rem;
+        border-top: 2px solid var(--dark-green);
+        display: flex;
+        gap: 1rem;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    .city-name,
+    .city-phone-number,
+    .address {
+        font-family: u.$fontAcnolica;
+        color: var(--darker-grey);
+    }
+
+    .city-name,
+    .city-phone-number {
+        font-size: 1em;
+    }
+
+    .address {
+        text-align: left;
+        font-size: .75em;
+    }
+    
+    .view-map-button {
+        background: transparent;
+        border: none;
+        font-family: u.$fontAcnolica;
+        font-size: .75em;
+        color: var(--dark-green);
+        cursor: pointer;
+        transition: 200ms ease-in-out;
+    }
+
+    .view-map-button:hover {
+        color: var(--darker-grey);
+    }
+
+    .icons-company-name {
+        padding: .75rem;
+        display: flex;
+        flex-flow: wrap;
+        gap: 1.3rem;
+        justify-content: space-between;
+        align-items: center;
+        border-top: 1.5px solid var(--light-grey);
+    }
+    
+    .icons {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        gap: 1.3rem;
+    }
+    
+    .fab {
+        font-size: 1.5em;
+        color: var(--darker-grey);
+        cursor: pointer;
+    }
+    
+    .fa-twitter:hover {
+        color: var(--twitter-blue);
+    }
+    
+    .fa-facebook-square:hover {
+        color: var(--facebook-blue);
+    }
+    
+    .fa-youtube:hover {
+        color: var(--youtube-red);
+    }
+    
+    
+    .fa-linkedin:hover {
+        color: var(--linkedin-blue);
+    }
+    
+    .skout {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .footer-company-name-span,
+    .footer-company-name {
+        font-family: u.$fontActor;
+        color: var(--darker-grey);
+    }
+    
+    .footer-company-name {
+        text-align: center;
+        font-size: 2.5em;
+        font-weight: bold;
+        font-family: u.$fontActor;
+    }
+    
+    .footer-company-name-span {
+        font-size: 1.5em;
+    }
+
+}
