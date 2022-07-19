@@ -1,0 +1,74 @@
+@use '../globals';
+@use '../utils' as u;
+
+.tips-section {
+    margin-top: 3rem;
+    padding: 3rem;
+
+    .tips-title {
+        margin-bottom: 3rem;
+        padding-top: .5rem;
+        color: var(--light-grey);
+        font-family: u.$fontActor;
+        border-top: 1px solid var(--light-grey);
+    }
+
+    .tips-span {
+        font-weight: 400;
+    }
+
+    .tip {
+        padding: .5rem 1rem;
+        display: flex;
+        gap: 1rem;
+        justify-content: space-between;
+        align-items: center;
+        border-top: 1px solid var(--dark-green);
+
+        @include u.breakpoints('medium') {
+            padding: 1rem 2rem;
+        }
+    }
+
+    .tip-number {
+        font-family: u.$fontActor;
+        font-size: 2.5em;
+        color: var(--lightest-grey);
+
+        @include u.breakpoints('medium') {
+            font-size: 4em;
+        }
+    }
+
+    .tip-title {
+        font-family: u.$fontAcnolica;
+        font-size: 1em;
+
+        @include u.breakpoints('medium') {
+            font-size: 1.5em;
+        }
+    }
+
+    .tip:last-child {
+        border-bottom: 1px solid var(--dark-green);
+    }
+
+}
+
+.expand-tip-button {
+    border: none;
+    background: transparent;
+    color: var(--dark-green);
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.button-icon {
+    fill: var(--dark-green);
+    transition: 200ms ease-in-out;
+}
+
+.button-icon:hover {
+    fill: var(--light-grey);
+}
