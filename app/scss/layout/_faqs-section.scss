@@ -1,10 +1,13 @@
 @use '../globals';
 @use '../utils' as u;
 
-.tips-section {
+.faqs-section {
     padding: 3rem 1.3rem 0 1.3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 
-    .tips-title {
+    .faqs-title {
         margin-bottom: 2rem;
         padding-top: .5rem;
         color: var(--light-grey);
@@ -12,23 +15,23 @@
         border-top: 1px solid var(--light-grey);
     }
 
-    .tips-span {
+    .faqs-span {
         font-weight: 400;
     }
 
-    .tip {
+    .faq {
         padding: .5rem 1rem;
         display: flex;
+        gap: 1rem;
         justify-content: space-between;
         align-items: center;
-        border-top: 1px solid var(--dark-green);
 
         @include u.breakpoints('medium') {
             padding: 1rem 2rem;
         }
     }
 
-    .tip-number {
+    .faq-letter {
         font-family: u.$fontActor;
         font-size: 2.5em;
         color: var(--lightest-grey);
@@ -38,21 +41,17 @@
         }
     }
 
-    .tip-title {
+    .faq-question {
         font-family: u.$fontAcnolica;
-        font-size: 1em;
         width: 70%;
+        font-size: 1em;
 
         @include u.breakpoints('medium') {
             font-size: 1.5em;
         }
     }
 
-    .tip:last-child {
-        border-bottom: 1px solid var(--dark-green);
-    }
-
-    .expand-tip-button {
+    .expand-faq-button {
         border: none;
         background: transparent;
         color: var(--dark-green);
@@ -60,14 +59,30 @@
         font-weight: bold;
         cursor: pointer;
     }
-    
-    .button-icon {
-        fill: var(--dark-green);
+
+    #expand-faq-icon {
+        font-size: 1.5em;
+        color: var(--dark-green);
         transition: 200ms ease-in-out;
     }
-    
-    .button-icon:hover {
-        fill: var(--light-grey);
+
+    #expand-faq-icon:hover {
+        color: var(--light-grey);
+    }
+
+    .more-questions-button {
+        margin: 3rem auto;
+        background: transparent;
+        border: none;
+        font-size: .75em;
+        font-family: u.$fontAcme;
+        color: var(--dark-green);
+        cursor: pointer;
+        transition: 200ms ease-in-out;
+    }
+
+    .more-questions-button:hover {
+        color: var(--light-grey);
     }
 
 }

@@ -1,0 +1,105 @@
+@use '../globals';
+@use '../utils' as u;
+
+.glossary-section {
+    padding: 3rem 1.3rem 0 1.3rem;
+
+    .glossary-title {
+        margin-bottom: 2rem;
+        padding-top: .5rem;
+        color: var(--light-grey);
+        font-family: u.$fontActor;
+        border-top: 1px solid var(--light-grey);
+    }
+
+    .glossary-span {
+        font-weight: 400;
+    }
+
+    .glossary-box {
+        padding: 2rem;
+        display: flex;
+        gap: 2rem;
+        flex-direction: column;
+        justify-content: center;
+        background: linear-gradient(45deg, var(--lightest-grey), var(--color-white));
+
+        @include u.breakpoints('medium') {
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+    }
+
+    .glossary-list {
+        padding: 1.3rem;
+        display: flex;
+        gap: 1.3rem;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        list-style: none;
+        background-color: var(--color-white);
+        border-radius: .5rem;
+
+        @include u.breakpoints('large') {
+            gap: .1rem;
+        }
+    }
+
+    .glossary-list-element {
+        padding-left: 1.5rem;
+        cursor: pointer;
+    }
+
+    .glossary-link {
+        padding: .2rem;
+        line-height: 2em;
+        font-family: u.$fontAcnolica;
+        font-size: 1em;
+        color: var(--darker-grey);
+    }
+
+    .glossary-link:hover {
+        border-bottom: 1px solid var(--dark-green);
+        color: var(--dark-green);
+    }
+
+    .hidden {
+        display: none;
+
+        @include u.breakpoints('large') {
+            display: block;
+        }
+    }
+
+    .glossary-info {
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1.3rem;
+
+        @include u.breakpoints('medium') {
+            width: 70%;
+        }
+    }
+
+    .glossary-info-title {
+        text-transform: uppercase;
+        font-size: 2em;
+        font-family: u.$fontActor;
+    }
+
+    .glossary-info-text {
+        padding-left: 1.3rem;
+        border-left: 1.5px solid var(--dark-green);
+        font-family: u.$fontAcnolica;
+        font-size: 1em;
+
+        @include u.breakpoints('medium') {
+            margin-left: 1.3rem;
+        }
+    }
+
+}
