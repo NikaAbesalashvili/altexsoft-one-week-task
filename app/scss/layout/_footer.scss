@@ -50,7 +50,7 @@ footer {
 
     .locations-and-info {
         display: flex;
-        gap: 1.3rem;
+        gap: 1rem;
         flex-direction: column;
     }
 
@@ -59,7 +59,7 @@ footer {
         border-top: 2px solid var(--dark-green);
         display: grid;
         grid-template-columns: 1fr;
-        gap: 2rem;
+        gap: 1rem;
         place-items: start ;
 
         @include u.breakpoints('medium') {

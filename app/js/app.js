@@ -99,6 +99,27 @@ glossaryListElements.forEach((glossaryListElement, index) => {
 
 expandFaqButtons.forEach((expandFaqButton) => {
     expandFaqButton.addEventListener('click', () => {
+
+        if(expandFaqButton.parentElement.lastElementChild.className === 'faq-answer') {
+            expandFaqButton.parentElement.removeChild(expandFaqButton.parentElement.lastChild);
+        } else {
+            let faqAnswer = document.createElement('div');
+            faqAnswer.className = 'faq-answer';
+
+            let answerLetter = document.createElement('h2');
+            answerLetter.className = 'faq-letter';
+            answerLetter.innerText = 'A';
+
+            let answerText = document.createElement('p');
+            answerText.className = 'faq-answer-text';
+            answerText.innerText = 'Everyone needs cybersecurity. Some information requires more protection than other information, but our solution is adaptable to every business. ';
+        
+            faqAnswer.appendChild(answerLetter);
+            faqAnswer.appendChild(answerText);
+
+            expandFaqButton.parentElement.appendChild(faqAnswer);
+        }
+
         expandFaqButton.children[0].className = expandFaqButton.children[0].className === 'fa fa-angle-down' ? 'fa fa-angle-up' : 'fa fa-angle-down';
     });
 });

@@ -22,12 +22,33 @@
     .faq {
         padding: .5rem 1rem;
         display: flex;
+        flex-wrap: wrap;
         gap: 1rem;
         justify-content: space-between;
         align-items: center;
 
         @include u.breakpoints('medium') {
             padding: 1rem 2rem;
+        }
+    }
+
+    .faq-answer {
+        display: flex;
+        gap: 2rem;
+        align-items: center;
+        
+        @include u.breakpoints('medium') {
+            justify-content: space-between;
+        }
+    }
+
+    .faq-answer-text {
+        width: 70%;
+        font-size: .875em;
+        font-family: u.$fontAcnolica;
+
+        @include u.breakpoints('medium') {
+            width: 83%;
         }
     }
 
@@ -41,7 +62,7 @@
         }
     }
 
-    .faq-question {
+    .faq-text {
         font-family: u.$fontAcnolica;
         width: 70%;
         font-size: 1em;
