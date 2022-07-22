@@ -1,5 +1,10 @@
 const burgerIcon = document.getElementById('burger-menu-icon')
 const burgerMenu = document.getElementById('burger-menu')
+const tipsAndTools = document.getElementById('tips-and-tools');
+const subNav = document.getElementById('sub-nav');
+const header = document.getElementById('header');
+const expandFaqButtons = document.querySelectorAll('.expand-faq-button');
+const glossaryListElements = document.querySelectorAll('.glossary-list-element');
 
 const glossariInformationTexts = [
     {
@@ -68,8 +73,6 @@ const glossariInformationTexts = [
     },
 ]
 
-const expandFaqButtons = document.querySelectorAll('.expand-faq-button');
-const glossaryListElements = document.querySelectorAll('.glossary-list-element');
 
 glossaryListElements.forEach((glossaryListElement, index) => {
     glossaryListElement.addEventListener('click', () => {
@@ -127,9 +130,17 @@ expandFaqButtons.forEach((expandFaqButton) => {
 burgerIcon.addEventListener('click', () => {
     if(burgerIcon.classList.contains('fa-bars')) {
         burgerIcon.className = 'fas fa-times';
+        header.className = 'fixed-header';
+        burgerMenu.className = 'expandable-menu expanded';
         burgerMenu.style.display = 'flex';
+        tipsAndTools.style.display = 'none';
+        subNav.style.display = 'none';
     } else {
         burgerIcon.className = 'fas fa-bars';
+        header.className = '';
+        burgerMenu.className = 'expandable-menu';
         burgerMenu.style.display = 'none';
+        tipsAndTools.style.display = 'block';
+        subNav.style.display = 'flex';
     }
 });

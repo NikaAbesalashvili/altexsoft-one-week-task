@@ -18,17 +18,16 @@
         <script src="/app/js/app.js" defer ></script>
     </head>
     <body>
-        <header>
+        <header id="header">
 
             <nav>
     
-                <div class="top-section">
+                <div class="top-section" >
                     <h2 class="site-name">SKOUT</h2>
+
                     <i class="fas fa-bars" id="burger-menu-icon" ></i>
                 </div>
-    
-                <h1 class="nav-text">TIPS & TOOLS</h1>
-    
+
                 <div class="expandable-menu" id="burger-menu" >
                     <ul class="expanded-menu-list" >
     
@@ -65,20 +64,24 @@
     
                     </ul>
     
-                    <button class="expanded-menu-button">
-                        <a href="#" class="button-link" >
-                            GET SKOUT
-                        </a>
-                    </button>
-                    <button class="expanded-menu-button">
-                        <a href="#" class="button-link" >
-                            LOG IN
-                        </a>
-                    </button>
+                    <div class="expandable-menu-buttons">
+                        <button class="expanded-menu-button">
+                            <a href="#" class="button-link" >
+                                GET SKOUT
+                            </a>
+                        </button>
+                        <button class="expanded-menu-button">
+                            <a href="#" class="button-link" >
+                                LOG IN
+                            </a>
+                        </button>
+                    </div>
     
                 </div>
-    
-                <ul class="sub-nav">
+
+                <h1 class="nav-text" id="tips-and-tools" >TIPS & TOOLS</h1>
+        
+                <ul class="sub-nav" id="sub-nav" >
                     <li class="sub-nav-element">
                         <a href="#tips" class="sub-nav-element-link">
                             TIPS
