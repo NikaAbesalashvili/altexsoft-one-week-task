@@ -3,8 +3,9 @@ const burgerMenu = document.getElementById('burger-menu')
 const tipsAndTools = document.getElementById('tips-and-tools');
 const subNav = document.getElementById('sub-nav');
 const header = document.getElementById('header');
-const expandFaqButtons = document.querySelectorAll('.expand-faq-button');
+const tipsButtons = document.querySelectorAll('.tip-button-icon');
 const glossaryListElements = document.querySelectorAll('.glossary-list-element');
+const expandFaqButtons = document.querySelectorAll('.expand-faq-button');
 
 const glossariInformationTexts = [
     {
@@ -73,6 +74,25 @@ const glossariInformationTexts = [
     },
 ]
 
+
+tipsButtons.forEach((tipsButton) => {
+    tipsButton.addEventListener('click', () => {
+        if(tipsButton.parentElement.parentElement.lastElementChild.className === 'tip-info-box') {
+            tipsButton.parentElement.parentElement.removeChild(tipsButton.parentElement.parentElement.lastElementChild);
+        } else {
+            console.log('HERE');
+            let tipInfoBox = document.createElement('div');
+            tipInfoBox.className = 'tip-info-box';
+
+            let tipInfoParagraph = document.createElement('p');
+            tipInfoParagraph.className = 'tip-info-paragraph';
+            tipInfoParagraph.innerText = 'There’s nothing hackers love more than a dismissed update reminder. We keep our team’s computers in shape and up to date so that they aren’t subject to attacks that could otherwise be avoided.\n\n\n Not properly updating your systems makes you an easy to reach target and hackers will often go after the lowest hanging fruit. When it comes to maintaining a strong cybersecurity network the best thing a user can do is to prevent problems before they occur, and the easiest way to do that is by making sure that all systems are updated and updated regularly. '
+        
+            tipInfoBox.appendChild(tipInfoParagraph);
+            tipsButton.parentElement.parentElement.appendChild(tipInfoBox);
+        }
+    });
+});
 
 glossaryListElements.forEach((glossaryListElement, index) => {
     glossaryListElement.addEventListener('click', () => {
@@ -144,3 +164,13 @@ burgerIcon.addEventListener('click', () => {
         subNav.style.display = 'flex';
     }
 });
+
+window.addEventListener('resize', () => {
+    if(window.innerWidth > 900) {
+        header.removeAttribute('class');
+        burgerMenu.className = 'expandable-menu';
+        tipsAndTools.style.display = 'block';
+        subNav.style.display = 'flex';
+    }
+});
+

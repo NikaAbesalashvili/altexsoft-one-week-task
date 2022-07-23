@@ -15,6 +15,12 @@ nav {
     flex-direction: column;
     justify-content: center;
     background: linear-gradient(var(--dark-green), var(--gradient-cyan));
+
+    @include u.breakpoints('large') {
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
     
     .top-section {
         height: 10vh;
@@ -24,7 +30,7 @@ nav {
         justify-content: space-between;
         align-items: center;
 
-        @include u.breakpoints('medium') {
+        @include u.breakpoints('large') {
             display: inline;
             width: min-content;
         }
@@ -32,11 +38,11 @@ nav {
     }
     
     #burger-menu-icon {
-        font-size: 3rem;
+        font-size: 2rem;
         color: var(--color-white);
         cursor: pointer;
 
-        @include u.breakpoints('medium') {
+        @include u.breakpoints('large') {
             display: none;
         }
 
@@ -49,13 +55,17 @@ nav {
     }
 
     .site-name {
-        font-size: 3rem;
+        font-size: 2rem;
     }
     
     .nav-text {
-        margin-bottom: 2rem;
+        margin-bottom: 5rem;
         font-size: 2.5em;
         text-align: center;
+
+        @include u.breakpoints('medium') {
+            width: 100%;
+        }
     }
 
     .expandable-menu {
@@ -63,11 +73,12 @@ nav {
         padding: 1rem 0;
         flex-direction: column;
         gap: 1rem;
-        justify-content: space-between;
+        justify-content: space-around;
         align-items: center;
         background-color: var(--color-white);
 
-        @include u.breakpoints('medium') {
+        @include u.breakpoints('large') {
+            margin: 0 2.6rem 2.6rem 0;
             height: auto;
             background-color: transparent;
             display: flex;
@@ -77,9 +88,14 @@ nav {
 
     .expanded {
         position: fixed;
-        top: 13%;
+        height: 90vh;
+        top: 16%;
         width: 100%;
         height: 90vh;
+
+        @include u.breakpoints('medium') {
+            top: 15%;
+        }
     }
 
     .expanded-menu-list {
@@ -89,6 +105,10 @@ nav {
         gap: 1.3rem;
 
         @include u.breakpoints('medium') {
+            gap: .8rem;
+        }
+
+        @include u.breakpoints('large') {
             flex-direction: row;
             justify-content: space-between;
         }
@@ -101,6 +121,10 @@ nav {
         flex-direction: column;
 
         @include u.breakpoints('medium') {
+            flex-direction: row;
+        }
+
+        @include u.breakpoints('large') {
             margin-bottom: 0;
             flex-direction: row;
         }
@@ -125,7 +149,7 @@ nav {
     .expanded-menu-button:hover {
         color: var(--light-grey);
 
-        @include u.breakpoints('medium') {
+        @include u.breakpoints('large') {
             border-bottom: 1px solid var(--color-white);
         }
     }
@@ -139,7 +163,7 @@ nav {
         color: var(--dark-green);
         padding-bottom: 1.5rem;
         
-        @include u.breakpoints('medium') {
+        @include u.breakpoints('large') {
             padding-bottom: .5rem;
             color: var(--color-white);
         } 
@@ -150,7 +174,7 @@ nav {
         text-align: center;
         cursor: pointer;
 
-        @include u.breakpoints('medium') {
+        @include u.breakpoints('large') {
             color: var(--color-white);
         }
 
@@ -171,17 +195,16 @@ nav {
         line-height: 1.5em;
         color: var(--dark-green);
 
-        @include u.breakpoints('medium') {
+        @include u.breakpoints('large') {
             border-color: var(--color-white);
         }
     }
 
     .expanded-menu-button:hover {
         border-color: var(--light-grey);
-        padding: .75rem 2.6rem;
         cursor: pointer;
 
-        @include u.breakpoints('medium') {
+        @include u.breakpoints('large') {
             padding: .75rem 1rem;
             border-color: var(--color-white);
         }
@@ -190,7 +213,7 @@ nav {
 
     .sub-nav {
         position: absolute;
-        bottom: -15%;
+        bottom: -11%;
         left: 15%;
         right: 15%;
         padding: .5rem 1rem;
@@ -239,7 +262,7 @@ nav {
     .button-link {
         color: var(--dark-green);
 
-        @include u.breakpoints('medium') {
+        @include u.breakpoints('large') {
             color: var(--color-white);
         }
     }
@@ -247,7 +270,7 @@ nav {
     .button-link:hover {
         color: var(--light-grey);
 
-        @include u.breakpoints('medium') {
+        @include u.breakpoints('large') {
             color: var(--color-white);
         }
     }

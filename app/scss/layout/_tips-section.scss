@@ -19,6 +19,7 @@
     .tip {
         padding: .5rem 1rem;
         display: flex;
+        flex-wrap: wrap;
         justify-content: space-between;
         align-items: center;
         border-top: 1px solid var(--dark-green);
@@ -61,13 +62,23 @@
         cursor: pointer;
     }
     
-    .button-icon {
+    .tip-button-icon {
         fill: var(--dark-green);
         transition: 200ms ease-in-out;
     }
     
-    .button-icon:hover {
+    .tip-button-icon:hover {
         fill: var(--light-grey);
+    }
+
+    .tip-info-box {
+        margin: 2rem 0;
+    }
+
+    .tip-info-paragraph {
+        text-align: left;
+        font-family: u.$fontAcnolica;
+        font-size: .875em;
     }
 
 }
